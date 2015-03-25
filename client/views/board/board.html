@@ -1,0 +1,21 @@
+<template name="Board">
+{{#if arePlayerDefined}}
+  {{#if winner}}
+    <p>This game has ended, {{getWinner}}</p>
+  {{else}}
+    {{#if isMyTurn}}
+      <p>It is your turn to make a move!</p>
+      {{#each board}}
+          <button id="{{index}}" class="btn btn-primary grid tile">{{getDraw}}</button>
+          {{#if isNewRow}}
+            <br/>
+          {{/if}}
+      {{/each}}
+    {{else}}
+      <p>Is the turn of the other player!</p>
+    {{/if}}
+  {{/if}}
+{{else}}
+  <p>Waiting for player to join...</p>
+{{/if}}
+</template>

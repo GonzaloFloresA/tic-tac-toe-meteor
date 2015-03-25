@@ -1,0 +1,21 @@
+<template name="GamesList">
+  <ul class="list-group">
+    <h2>Open Games</h2>
+    {{#each openGames}}
+      <li class="gameItem list-group-item">
+        <p>Name: {{name}}</p>
+        <p>Creator: {{player01}}</p> <!--TODO: Get user email-->
+        <button id="enterGame" class="btn btn-default">Join!</button>
+      </li>
+    {{/each}}
+    <h2>Ended Games</h2>
+    {{#each endedGames}}
+      <li class="gameItem list-group-item">
+        <p>Name: {{name}}</p>
+        <p>Creator: {{player01}}</p> <!--TODO: Get user email-->
+        <p>Winner: {{winner}}</p> <!--TODO: Get user email-->
+        <button id="enterGame" class="btn btn-default">Review</button>
+      </li>
+    {{/each}}
+  </ul>
+</template>

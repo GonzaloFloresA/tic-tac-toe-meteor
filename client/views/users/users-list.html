@@ -1,0 +1,9 @@
+<template name="UsersList">
+  <ul>
+    {{#each onlineUsers}}
+      <li class="userItem">
+        {{firstName}} {{lastName}}
+      </li>
+    {{/each}}
+  </ul>
+</template>

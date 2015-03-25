@@ -1,0 +1,22 @@
+<template name="Scores">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Wins</th>
+      <th>Lost</th>
+      <th>Draws</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each scores}}
+    <tr>
+      <td>{{email}}</td>
+      <td>{{wins}}</td>
+      <td>{{lost}}</td>
+      <td>{{draws}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</template>
